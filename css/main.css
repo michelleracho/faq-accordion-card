@@ -58,6 +58,7 @@ body {
 
 .faq__question {
   font-size: 1.4rem;
+  padding-right: 2rem;
 }
 
 @media (hover: hover) {
@@ -73,14 +74,17 @@ body {
 }
 
 .faq__answer {
-  display: none;
   color: #787887;
   line-height: 1.6;
-  margin-top: 1rem;
+  padding-right: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
 }
 
 .faq__answer--active {
-  display: block;
+  margin-top: 1rem;
 }
 
 .show-btn {
@@ -91,6 +95,10 @@ body {
   position: absolute;
   right: 0;
   top: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .show-btn--active {

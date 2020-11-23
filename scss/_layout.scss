@@ -24,6 +24,7 @@
 
   &__question {
     font-size: 1.4rem;
+    padding-right: 2rem;
 
     &:hover {
       @media (hover: hover) {
@@ -39,13 +40,15 @@
   }
 
   &__answer {
-    display: none;
     color: $color-neutral-gray;
     line-height: 1.6;
-    margin-top: 1rem;
+    padding-right: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 
     &--active {
-      display: block;
+      margin-top: 1rem;
     }
   }
 }
@@ -53,10 +56,10 @@
 // button
 .show-btn {
   @include btnReset;
-  // border: 1px solid;
   position: absolute;
   right: 0;
   top: 1.5rem;
+  transition: transform 0.3s ease-in-out;
 
   &--active {
     transform: rotate(180deg);
