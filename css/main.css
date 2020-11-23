@@ -33,21 +33,64 @@ body {
 }
 
 .container {
+  border: 1px solid;
   width: 85%;
   background-color: #fff;
   border-radius: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.illustration {
+  width: 25rem;
+  position: relative;
+}
+
+.illustration--main, .illustration--shadow {
+  position: absolute;
+}
+
+.illustration--main img, .illustration--shadow img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.illustration--main {
+  top: -10rem;
+  -webkit-transform: translateX(-7%);
+          transform: translateX(-7%);
+}
+
+.illustration--shadow {
+  top: 0;
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
+.title {
+  font-size: 3rem;
+  color: #1d1e35;
+  text-align: center;
+  margin-bottom: -2rem;
+  margin-top: 13.5rem;
 }
 
 .faq {
   list-style: none;
-  padding: 4.5rem 2rem;
-}
-
-.faq__title {
-  font-size: 3rem;
-  color: #1d1e35;
-  text-align: center;
-  margin-bottom: 2rem;
+  padding: 4rem 2rem;
 }
 
 .faq__item {

@@ -1,20 +1,50 @@
 .container {
+  border: 1px solid;
   width: 85%;
   background-color: #fff;
   border-radius: 2rem;
+  position: relative;
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.illustration {
+  width: 25rem;
+  position: relative;
+
+  &--main,
+  &--shadow {
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &--main {
+    top: -10rem;
+    transform: translateX(-7%);
+  }
+
+  &--shadow {
+    top: 0;
+    transform: scale(0.93);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: $color-primary-text-blue;
+  text-align: center;
+  margin-bottom: -2rem;
+  margin-top: 13.5rem;
 }
 
 .faq {
-  // border: 1px solid;
   list-style: none;
-  padding: 4.5rem 2rem;
-
-  &__title {
-    font-size: 3rem;
-    color: $color-primary-text-blue;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
+  padding: 4rem 2rem;
 
   &__item {
     padding: 1.5rem 0;
