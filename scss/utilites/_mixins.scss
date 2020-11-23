@@ -1,0 +1,12 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btnReset {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}

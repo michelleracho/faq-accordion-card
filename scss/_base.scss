@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-default;
+  font-size: 1.2rem;
+  color: $color-neutral-gray-dark;
+  background: linear-gradient(to bottom, $color-bg-violet, $color-bg-blue);
+  position: relative;
+  min-height: 100vh;
+  @include flexCenter;
+}
