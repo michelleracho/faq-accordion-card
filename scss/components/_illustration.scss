@@ -1,0 +1,72 @@
+.illustration {
+  width: 25rem;
+  position: relative;
+
+  @media only screen and (min-width: $bp-md) {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  &--main,
+  &--shadow {
+    position: absolute;
+
+    @media only screen and (min-width: $bp-md) {
+      left: -5rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &--main {
+    z-index: 2;
+    top: -10rem;
+    transform: translateX(-7%);
+
+    @media only screen and (min-width: $bp-md) {
+      top: unset;
+      transform: translate(-17%, -50%);
+      // clip-path: polygon(16% 0, 100% 0, 100% 100%, 16% 100%);
+    }
+  }
+
+  &--shadow {
+    z-index: 1;
+    top: 0;
+    transform: scale(0.93);
+
+    @media only screen and (min-width: $bp-md) {
+      top: unset;
+      transform: scale(1.65) translate(-30%, -35%);
+      // clip-path: polygon(49% 25%, 100% 23.5%, 100% 86%, 49% 86%);
+    }
+  }
+}
+
+.box {
+  display: none;
+
+  @media only screen and (min-width: $bp-md) {
+    display: block;
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+    z-index: 100;
+    left: 0;
+    top: 52%;
+    transform: translateY(-50%);
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    left: 12.9rem;
+    left: 10%;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    left: 15.5%;
+  }
+}
