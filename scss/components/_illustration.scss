@@ -52,21 +52,12 @@
 
   @media only screen and (min-width: $bp-md) {
     display: block;
-    position: fixed;
-    width: 15rem;
-    height: 15rem;
+    position: absolute;
+    width: 12.5rem;
+    height: auto;
     z-index: 100;
-    left: 0;
-    top: 52%;
+    left: -6rem;
+    top: 57%;
     transform: translateY(-50%);
-  }
-
-  @media only screen and (min-width: $bp-lg) {
-    left: 12.9rem;
-    left: 10%;
-  }
-
-  @media only screen and (min-width: $bp-lg) {
-    left: 15.5%;
   }
 }

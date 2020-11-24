@@ -1,6 +1,15 @@
+.box-wrapper {
+  width: 85%;
+  position: relative;
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 85rem;
+  }
+}
+
 .container {
   min-width: 27rem;
-  width: 85%;
+  width: 100%;
   background-color: #fff;
   border-radius: 2rem;
   position: relative;
@@ -8,7 +17,6 @@
   flex-direction: column;
 
   @media only screen and (min-width: $bp-md) {
-    max-width: 85rem;
     overflow: hidden;
     flex-direction: row;
   }

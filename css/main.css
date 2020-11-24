@@ -32,9 +32,20 @@ body {
           justify-content: center;
 }
 
+.box-wrapper {
+  width: 85%;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .box-wrapper {
+    max-width: 85rem;
+  }
+}
+
 .container {
   min-width: 27rem;
-  width: 85%;
+  width: 100%;
   background-color: #fff;
   border-radius: 2rem;
   position: relative;
@@ -55,7 +66,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 85rem;
     overflow: hidden;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -237,27 +247,14 @@ body {
 @media only screen and (min-width: 768px) {
   .box {
     display: block;
-    position: fixed;
-    width: 15rem;
-    height: 15rem;
+    position: absolute;
+    width: 12.5rem;
+    height: auto;
     z-index: 100;
-    left: 0;
-    top: 52%;
+    left: -6rem;
+    top: 57%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .box {
-    left: 12.9rem;
-    left: 10%;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .box {
-    left: 15.5%;
   }
 }
 /*# sourceMappingURL=main.css.map */
