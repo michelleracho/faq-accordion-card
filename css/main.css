@@ -34,6 +34,7 @@ body {
 
 .container {
   border: 1px solid;
+  min-width: 27rem;
   width: 85%;
   background-color: #fff;
   border-radius: 2rem;
@@ -53,13 +54,37 @@ body {
           flex-direction: column;
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 85rem;
+    overflow: hidden;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .illustration {
   width: 25rem;
   position: relative;
 }
 
+@media only screen and (min-width: 768px) {
+  .illustration {
+    width: 100%;
+    max-width: 32rem;
+  }
+}
+
 .illustration--main, .illustration--shadow {
   position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+  .illustration--main, .illustration--shadow {
+    left: -15%;
+  }
 }
 
 .illustration--main img, .illustration--shadow img {
@@ -69,28 +94,61 @@ body {
 }
 
 .illustration--main {
+  z-index: 2;
   top: -10rem;
   -webkit-transform: translateX(-7%);
           transform: translateX(-7%);
 }
 
+@media only screen and (min-width: 768px) {
+  .illustration--main {
+    top: unset;
+    -webkit-transform: translate(-17%, -50%);
+            transform: translate(-17%, -50%);
+  }
+}
+
 .illustration--shadow {
+  z-index: 1;
   top: 0;
   -webkit-transform: scale(0.93);
           transform: scale(0.93);
 }
 
-.title {
-  font-size: 3rem;
-  color: #1d1e35;
-  text-align: center;
-  margin-bottom: -2rem;
-  margin-top: 13.5rem;
+@media only screen and (min-width: 768px) {
+  .illustration--shadow {
+    top: unset;
+    -webkit-transform: scale(1.65) translate(-30%, -35%);
+            transform: scale(1.65) translate(-30%, -35%);
+  }
 }
 
 .faq {
   list-style: none;
-  padding: 4rem 2rem;
+  padding: 4rem 2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq {
+    width: 50%;
+    padding: 5rem;
+    padding-left: 0;
+  }
+}
+
+.faq__title {
+  font-size: 3rem;
+  color: #1d1e35;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 8.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq__title {
+    text-align: left;
+    margin-top: unset;
+  }
 }
 
 .faq__item {

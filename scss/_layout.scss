@@ -1,20 +1,37 @@
 .container {
   border: 1px solid;
+  min-width: 27rem;
   width: 85%;
   background-color: #fff;
   border-radius: 2rem;
   position: relative;
   @include flexCenter;
   flex-direction: column;
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 85rem;
+    overflow: hidden;
+    flex-direction: row;
+  }
 }
 
 .illustration {
+  // border: 1px solid;
   width: 25rem;
   position: relative;
+
+  @media only screen and (min-width: $bp-md) {
+    width: 100%;
+    max-width: 32rem;
+  }
 
   &--main,
   &--shadow {
     position: absolute;
+
+    @media only screen and (min-width: $bp-md) {
+      left: -15%;
+    }
 
     img {
       width: 100%;
@@ -24,27 +41,50 @@
   }
 
   &--main {
+    z-index: 2;
     top: -10rem;
     transform: translateX(-7%);
+
+    @media only screen and (min-width: $bp-md) {
+      top: unset;
+      transform: translate(-17%, -50%);
+    }
   }
 
   &--shadow {
+    z-index: 1;
     top: 0;
     transform: scale(0.93);
-  }
-}
 
-.title {
-  font-size: 3rem;
-  color: $color-primary-text-blue;
-  text-align: center;
-  margin-bottom: -2rem;
-  margin-top: 13.5rem;
+    @media only screen and (min-width: $bp-md) {
+      top: unset;
+      transform: scale(1.65) translate(-30%, -35%);
+    }
+  }
 }
 
 .faq {
   list-style: none;
-  padding: 4rem 2rem;
+  padding: 4rem 2.5rem;
+
+  @media only screen and (min-width: $bp-md) {
+    width: 50%;
+    padding: 5rem;
+    padding-left: 0;
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: $color-primary-text-blue;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 8.5rem;
+
+    @media only screen and (min-width: $bp-md) {
+      text-align: left;
+      margin-top: unset;
+    }
+  }
 
   &__item {
     padding: 1.5rem 0;
