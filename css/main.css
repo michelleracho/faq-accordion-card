@@ -76,6 +76,31 @@ body {
   color: #3e52a3;
 }
 
+.faq-container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq-container {
+    width: 50%;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: #1d1e35;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    text-align: left;
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+  }
+}
+
 .faq {
   list-style: none;
   padding: 4rem 2.5rem;
@@ -83,24 +108,9 @@ body {
 
 @media only screen and (min-width: 768px) {
   .faq {
-    width: 50%;
+    width: 100%;
     padding: 5rem;
     padding-left: 0;
-  }
-}
-
-.faq__title {
-  font-size: 3rem;
-  color: #1d1e35;
-  text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 8.5rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .faq__title {
-    text-align: left;
-    margin-top: unset;
   }
 }
 
